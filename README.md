@@ -1,0 +1,1 @@
+- Check the README inside the frontend and also the run.sh inside the server folder
