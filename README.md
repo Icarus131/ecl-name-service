@@ -1,1 +1,3 @@
-- Check the README inside the frontend and also the run.sh inside the server folder
+# Custom Name Service
+- Solidity Implementation for nameservice with whitelisting
+- Frontent built with React+Vite
