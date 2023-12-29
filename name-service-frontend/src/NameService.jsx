@@ -12,19 +12,18 @@ const NameService = ({ contractAddress, walletKeyPair }) => {
   const contract = new PublicKey(contractAddress);
 
   const getNames = async () => {
-    // Im leaving this func empty since you have to get the names from the smart contract. I will need your help on how to obtain that from the contract. Once we do that we just have to append to const names
   };
 
   const mintName = async () => {
     try {
-      // Creating a transaction per name minted and calling mint func from our smartcontract itself (docs specificed this way, idk if it right)
+      // Creating a transaction per name minted and calling mint func from our smart contract
       const transaction = new Transaction().add(
         contract.mintName(name, walletKeyPair.publicKey, walletKeyPair.publicKey),
       );
       // Sign and send the transaction
       const signature = await sendAndConfirmTransaction(connection, transaction, [walletKeyPair]);
       console.log('Mint Transaction Signature:', signature);
-      getNames(); // Again this func is empty
+      getNames(); 
     }
 
     // Bog standard error handling
